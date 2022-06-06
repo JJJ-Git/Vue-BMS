@@ -5,7 +5,7 @@ import router from './router'
 Vue.config.productionTip = false
 
 // 导入疯狂的request（axios）
-import '@/common/request/index.js'
+import '@/common/request/request.js'
 
 new Vue({
   router,

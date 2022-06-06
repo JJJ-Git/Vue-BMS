@@ -11,7 +11,7 @@
 
 const base = 'https://192.168.1.69:8081';
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'development' ? './' : './',
+  // publicPath: process.env.NODE_ENV === 'development' ? './' : './',
   // outputDir: 'testDist',
   lintOnSave: process.env.NODE_ENV === 'development',
   // devServer,
