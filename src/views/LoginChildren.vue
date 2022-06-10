@@ -1,25 +1,29 @@
 <template>
   <div class="login">
-    <div>登录页子路由</div>
-    <router-view></router-view>
+    <div>{{ msg }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginChildren',
+  name: "LoginChildren",
   data() {
     return {
-      
+      msg: "登录页子路由",
     }
   },
-  created() {
+  mounted() {
+    console.log(this.$el.textContent)
+    this.msg = "aaa"
+    console.log(this.$el.textContent)
+    console.log(this.$el.textContent === "aaa")
+    this.$nextTick(() => {
+      console.log(this.$el.textContent)
+      console.log(this.$el.textContent === "aaa")
+    })
   },
-  methods: {
-  }
+  methods: {},
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

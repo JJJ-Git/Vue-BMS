@@ -11,8 +11,8 @@ export default {
 </script>
 
 <style scoped>
-.register {
-  /* margin: 0 auto; */
-  /* text-align: center; */
-}
+/* .register {
+  margin: 0 auto;
+  text-align: center;
+} */
 </style>

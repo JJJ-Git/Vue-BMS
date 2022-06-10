@@ -1,6 +1,6 @@
 <template>
   <div class="test-slot">
-    <div>{{ msg + '-' + user }}</div>
+    <div>{{ msg + "-" + user }}</div>
     <!-- <slot>
       <a href="javascript:;">默认显示内容</a>
     </slot>
@@ -9,7 +9,6 @@
     </slot> -->
     <ul>
       <li v-for="(item, index) in list" :key="item.id">
-        {{ item.name }}
         <slot :aaa="item" :index="index"></slot>
       </li>
     </ul>
@@ -30,7 +29,17 @@ export default {
       ],
     }
   },
-  inject: ['user'],
+  inject: ["user"],
+  setup(props) {
+    let arr = [1, 2]
+    let f1 = () => {
+      arr = [1, 2, props.msg]
+    }
+    return {
+      arr,
+      f1,
+    }
+  },
 }
 </script>
 

@@ -5,7 +5,7 @@ Vue.use(Router)
 
 const router = new Router({
   scrollBehavior(to, from, savedPosition) {
-    console.log("滚动", to)
+    // console.log("滚动", to)
     // console.log("滚动", from)
     // console.log("滚动", savedPosition)
     if (savedPosition) {
@@ -46,6 +46,16 @@ const router = new Router({
           component: () => import("@/views/LoginForgetPassword"),
         },
       ],
+    },
+    {
+      path: "/mixin",
+      name: "MixinPage",
+      component: () => import("@/views/MixinPage"),
+    },
+    {
+      path: "/functionTest",
+      name: "FunctionTest",
+      component: () => import("@/views/FunctionTest"),
     },
   ],
 })
