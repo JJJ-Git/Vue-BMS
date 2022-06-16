@@ -41,6 +41,9 @@ module.exports = {
       },
     },
   },
+  configureWebpack: {
+    
+  },
 }
 
 /* less配置 */

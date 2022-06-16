@@ -2,8 +2,15 @@
   <div class="function-test">
     <ul class="list">
       <li class="item">
-        <button @click="num++">加一</button>
-        <span>num: {{ num }}</span>
+        <div>
+          <button @click="num++">加一</button>
+          <span>num: {{ num }}</span>
+        </div>
+        <div>
+          <button @click="vueXNumAdd">vuex内容加一</button>
+          <span>vueXNum: {{ $store.getters.getCount }}</span>
+          <!-- <span>vueXNum: {{ $store.state.count }}</span> -->
+        </div>
       </li>
       <li class="item">
         <button @click="changeObjProperty">改名</button>
@@ -43,6 +50,9 @@ export default {
       // this.list.push('d')
       // this.list[0] = 'aaa'
       this.$set(this.list, "0", "aaa")
+    },
+    vueXNumAdd() {
+      this.$store.commit("addCount")
     },
   },
 }
